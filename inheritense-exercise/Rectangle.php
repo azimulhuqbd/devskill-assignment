@@ -7,7 +7,6 @@ class Rectangle extends Shape {
     public $height;
 
     public function __construct($width, $height) {
-        parent::__construct();
         $this->width = $width;
         $this->height = $height;
     }
@@ -21,7 +20,10 @@ class Rectangle extends Shape {
     }
 
     public function displayInfo() {
-        echo "Rectangle Perimeter: {$this->getPerimeter()} <br>";
-        echo "Rectangle Area: {$this->getArea()} <br>";
+        echo get_class($this) . ' Color: ' . parent::displayInfo() . '<br>';
+        echo get_class($this) . ' Width: ' . $this->width . '<br>';
+        echo get_class($this) . ' Height: ' . $this->height . '<br>';
+        echo get_class($this) . " Area: {$this->getArea()} <br>";
+        echo get_class($this) . " Perimeter: {$this->getPerimeter()} <br>";
     }
 }

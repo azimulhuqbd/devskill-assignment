@@ -17,7 +17,8 @@ class Circle extends Shape {
     }
 
     public function displayInfo() {
-        echo "Circle Perimeter: {$this->getPerimeter()} <br>";
-        echo "Circle Area: {$this->getArea()} <br>";
+        echo get_class($this) . ' Color: ' . parent::displayInfo() . '<br>';
+        echo get_class($this) . " Area: {$this->getArea()} <br>";
+        echo get_class($this) . " Perimeter: {$this->getPerimeter()} <br>";
     }
 }

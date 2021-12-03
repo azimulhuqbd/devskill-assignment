@@ -1,15 +1,20 @@
 <?php
 
 abstract class Shape {
-    protected $color = 'red';
+    private $color = 'red';
 
     public function __construct() {
     }
 
-    public function getArea() {
-    }
+    abstract public function getArea();
 
     abstract public function getPerimeter();
 
-    abstract public function displayInfo();
+    public function getColor() {
+        return $this->color;
+    }
+
+    public function displayInfo() {
+        return $this->getColor();
+    }
 }
