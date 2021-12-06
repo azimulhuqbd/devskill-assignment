@@ -7,6 +7,6 @@ class Square extends Rectangle {
     }
 
     public function displayInfo() {
-        parent::displayInfo();
+        Shape::displayInfo();
     }
 }

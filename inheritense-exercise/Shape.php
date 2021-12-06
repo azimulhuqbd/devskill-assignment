@@ -15,6 +15,8 @@ abstract class Shape {
     }
 
     public function displayInfo() {
-        return $this->getColor();
+        echo get_class($this) . ' Color: ' . $this->getColor() . '<br>';
+        echo get_class($this) . ' Area: ' . $this->getArea() . '<br>';
+        echo get_class($this) . ' Perimeter: ' . $this->getPerimeter() . '<br>';
     }
 }
